@@ -3,6 +3,10 @@ function parse_git_branch {
   echo "("${ref#refs/heads/}")"
 }
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 BLACK="\[\033[0;30m\]"
 BLUE="\[\033[0;34m\]"
 VIOLET="\[\033[1;35m\]"
